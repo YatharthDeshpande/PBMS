@@ -1,0 +1,15 @@
+.Home-Page{
+    width: 100%;
+    min-height:92.15vh;
+    max-height: auto;
+    
+}
+/* .homeimg{
+
+} */
+.viewBook{
+    text-decoration: none;
+}
+.viewBook:hover{
+    color: #5c5c5c;
+}
