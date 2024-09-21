@@ -1,37 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
-
+import { useState } from "react";
+import { useEffect } from "react";
 const Books = () => {
-  const [books, setBooks] = useState([]);
-
+  const [Data, setData] = useState([]);
   useEffect(() => {
-    const fetchBooks = async () => {
-      try {
-        const res = await axios.get("http://localhost:3000/api/v1/getBooks");
-        console.log(res);
-        setBooks(res.data.books); // Assuming the response has a 'books' property
-      } catch (error) {
-        console.error("Error fetching books:", error);
-      }
+    const fetch = async () => {
+      await axios
+        .get("http://localhost:1000/api/v1/getBooks")
+        .then((res) => setData(res.data.books));
     };
-
-    fetchBooks(); // Call the function here
-  }, []); // Empty dependency array to run once on mount
+    fetch(); 
+  }); 
 
   return (
     <div className="bg-dark" style={{ minHeight: "91.5vh" }}>
       <div className="d-flex justify-content-center align-items-center py-3">
         <h4 className="text-white">Books Section</h4>
+
+        {Data ? (
+        <div className="text-white">Data Fetched</div>
+          ):(
+        <div>Loading...</div>)}
       </div>
-      <div>
-        {books.map((book) => (
-          <div key={book._id} className="text-white">
-            <h5>{book.bookname}</h5>
-            <p>{book.author}</p>
-            {/* Add other book details as needed */}
-          </div>
-        ))}
-      </div>
+
     </div>
   );
 };
