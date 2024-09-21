@@ -22,9 +22,10 @@ const Books = () => {
       backgroundPosition: "center", // Centers the background image
       backgroundRepeat: "no-repeat", // Prevents repeating of the background image
       backgroundColor: "#011000", // Sets a fallback color if the image is unavailable 
+      backgroundAttachment: "fixed",
           }}>
-      <div className="d-flex justify-content-center align-items-center py-3">
-        <h4 className="text-white">Books Section</h4>
+      <div className="d-flex justify-content-center align-items-center mt-5 py-3">
+        <h4 className=""style={{ color: '#2a363b' }}>Books Section</h4>
       </div>
       {Data ? <BooksSection data = {Data}/> : <div className="text-white">Loading...</div>}
     </div>

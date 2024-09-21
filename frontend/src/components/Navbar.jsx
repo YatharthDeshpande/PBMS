@@ -1,13 +1,19 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
   return (
-    <div style={{borderBottom: '2px solid white'}}>
-      <nav className="navbar navbar-expand-lg bg-dark ">
+    <div style={{ borderBottom: '2px solid white' }}>
+      <nav className="navbar navbar-expand-lg">
         <div className="container">
-          <a className="navbar-brand text-white" href="#">
+          <Link className="navbar-brand text-white" to="/">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/9723/9723808.png"
+              alt="Logo"
+              style={{ width: '40px', marginRight: '10px' }}
+            />
             PBMS
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,17 +30,10 @@ const Navbar = () => {
               <Link className="nav-item nav-link active text-white" to={'/'}>
                 Home
               </Link>
-              <Link
-                className="nav-item nav-link active text-white"
-                to={'/books'}
-              >
+              <Link className="nav-item nav-link active text-white" to={'/books'}>
                 Books
               </Link>
-
-              <Link
-                className="nav-item nav-link active text-white"
-                to={'/addBooks'}
-              >
+              <Link className="nav-item nav-link active text-white" to={'/addBooks'}>
                 Add Books
               </Link>
             </ul>

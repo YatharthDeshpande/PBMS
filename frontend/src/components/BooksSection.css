@@ -1,0 +1,27 @@
+.book-card {
+    height: 360px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .book-image {
+    height: 30vh; /* Maintain image height */
+  }
+  .book-description {
+    margin-top: 10px;
+    font-size: 0.9em; /* Adjust font size as needed */
+    color: #353434; /* Change color for better visibility */
+    display: block; /* Ensure it takes up space */
+  }
+  .book-card {
+    background: rgba(255, 255, 255, 0.1); /* White background with transparency */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: light border for contrast */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05); /* Slightly scale up the card on hover */
+  }
+  

@@ -1,42 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import './BooksSection.css';
 
 const BooksSection = ({ data }) => {
-  return (
-    <div className="d-flex justify-content-around align-items-center flex-wrap ">
-      {data &&
-        data.map((item, index) => (
-          <div
-          key={index} // Added key prop here
-            className="m-3 glass"
-            style={{
-              width: "200px",
-              height: "360px",
-              border: "1px solid white",
-              borderRadius: "20px",
-              overflow: "hidden",
-            }}
-          >
-            <div>
-              <img
-                style={{ width: "200px", height: "210px" }}
-                className="img-fluid"
-                src={item.image}
-                alt="/"
-              />
-            </div>
-            <h6 style={{ fontSize: "25px" }} className="text-black px-2 m-0">
-              {item.bookname.slice(0, 20)}...
-            </h6>
-            <b style={{ fontSize: "30px", color: "red" }} className=" px-2">
-              Rs.{item.price}
-            </b>
-            <div className="d-flex justify-content-around align-items-center mb-2">
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
-            <button className="btn btn-primary">UPDATE</button>
-            <button className="btn btn-danger">DELETE</button>
+  return (
+    <div className="container">
+      <div className="row justify-content-start mb-1">
+        {data &&
+          data.map((item, index) => (
+            <div
+              key={index}
+              className="col-lg-3 col-md-4 col-sm-6 mb-4  "
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className="card book-card">
+                {/* Hide image on hover */}
+                {hoveredIndex === index ? (
+                  <div className="book-description">{item.description}</div> // Show description on hover
+                ) : (
+                  <img
+                    className="card-img-top book-image"
+                    src={item.image}
+                    alt={item.bookname}
+                  />
+                )}
+                <div className="card-body d-flex flex-column">
+                  <h6 className="card-title  " style={{ color: 'black' }}>{item.bookname.slice(0, 20)}...</h6>
+                  <b className="text-danger">Rs.{item.price}</b>
+                  <div className="mt-auto d-flex justify-content-around">
+                    <button className="btn btn-primary">UPDATE</button>
+                    <button className="btn btn-danger">DELETE</button>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+      </div>
     </div>
   );
 };

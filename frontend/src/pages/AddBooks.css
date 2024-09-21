@@ -1,0 +1,25 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images2.alphacoders.com/261/26102.jpg'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Ensures the background is behind everything */
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1); /* Light background with transparency */
+    backdrop-filter: blur(2px); /* Blur effect for the background */
+    border-radius: 10px; /* Optional: Rounded corners */
+    padding: 2rem; /* Adjust padding as needed */
+  }
+  

@@ -1,10 +1,11 @@
 .Home-Page {
     width: 100%;
-    min-height: 90.5vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
+    background-color: #99b898;
 }
 
 .viewBook {
