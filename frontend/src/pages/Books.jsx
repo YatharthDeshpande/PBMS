@@ -15,7 +15,14 @@ const Books = () => {
   });
 
   return (
-    <div className="bg-dark" style={{ minHeight: "91.5vh" }}>
+    <div className="bg-dark" style={{
+      minHeight: "91.5vh",
+      backgroundImage: "url(https://img.freepik.com/premium-photo/educational-concept-books-blue_387680-275.jpg)", // Add your image URL here
+      backgroundSize: "cover", // This ensures the image covers the entire background
+      backgroundPosition: "center", // Centers the background image
+      backgroundRepeat: "no-repeat", // Prevents repeating of the background image
+      backgroundColor: "#011000", // Sets a fallback color if the image is unavailable 
+          }}>
       <div className="d-flex justify-content-center align-items-center py-3">
         <h4 className="text-white">Books Section</h4>
       </div>

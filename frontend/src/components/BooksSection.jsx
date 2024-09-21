@@ -7,11 +7,10 @@ const BooksSection = ({ data }) => {
         data.map((item, index) => (
           <div
           key={index} // Added key prop here
-            className="m-3"
+            className="m-3 glass"
             style={{
               width: "200px",
               height: "360px",
-              backgroundColor: "orange",
               border: "1px solid white",
               borderRadius: "20px",
               overflow: "hidden",

@@ -7,7 +7,9 @@ import AddBooks from './pages/AddBooks';
 import Footer from './components/Footer';
 function App() {
   return (
+    <div className="App">
     <Router>
+      
       <Navbar/>
       <Routes>
         <Route exact path="/" element={<Home/>}/>
@@ -16,7 +18,8 @@ function App() {
       </Routes>
       <Footer/>
     </Router>
-  
+    
+    </div>
   
     
   );
