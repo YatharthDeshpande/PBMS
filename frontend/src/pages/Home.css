@@ -1,15 +1,68 @@
-.Home-Page{
+.Home-Page {
     width: 100%;
     min-height: 90.5vh;
-    max-height: auto;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
 }
-/* .homeimg{
 
-} */
-.viewBook{
+.viewBook {
     text-decoration: none;
 }
-.viewBook:hover{
+
+.viewBook:hover {
     color: #5c5c5c;
+}
+
+.col-lg-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 4vw;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 3vw;
+}
+
+p {
+    font-size: 1.5vw;
+    color: silver;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 6vw;
+    }
+    
+    h3 {
+        font-size: 4.5vw;
+    }
+    
+    p {
+        font-size: 2.5vw;
+    }
+    
+    .viewBook {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+    
+    .img-fluid {
+        max-height: 40vh;
+    }
 }

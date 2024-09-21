@@ -18,9 +18,30 @@
 }
 .footer{
   margin-top: auto;
+  position: fixed;
+  bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1000;
+    border-top: 1px solid white;
 }
 .glass{
   backdrop-filter: blur(30px);
   box-shadow: 0px 0px 30px rgba(227,288,237,0.37);
   border: 2px solid rgba(255,255,255,0.18);
+}
+
+.navbar{
+  position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1000;
+    border-bottom: 1px solid white;
 }

@@ -13,7 +13,7 @@ const Home = () => {
         >
         <h2 style={{fontSize:"80px"}}>Your Books</h2>
         <h3 style={{fontSize:"50px"}}>FOR YOU</h3>
-        <p className="mb-0" style={{color:"silver"}}>SEE YOOUR COLLECTIONS </p>
+        <p className="mb-0" style={{color:"silver"}}>SEE YOUR COLLECTIONS </p>
         <Link to="/books" className="viewBook my-3 ">View books</Link>
         </div>
         <div
